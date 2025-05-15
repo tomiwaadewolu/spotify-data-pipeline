@@ -14,3 +14,12 @@
 - Jupyter Notebooks
 - Docker (optional for containerized Airflow)
 - Git / GitHub
+
+## Setting Up Python Environment
+`python -m venv venv`
+
+`venv\Scripts\activate` (specific to Windows)
+
+`pip install --upgrade pip`
+
+Initial dependencies: `pip install pandas jupyter notebook`
