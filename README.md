@@ -23,3 +23,5 @@
 `pip install --upgrade pip`
 
 Initial dependencies: `pip install pandas jupyter notebook`
+
+Running the python script: `python scripts/extract_spotify_data.py`
