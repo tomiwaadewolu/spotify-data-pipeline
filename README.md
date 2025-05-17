@@ -24,4 +24,8 @@
 
 Initial dependencies: `pip install pandas jupyter notebook`
 
-Running the python script: `python scripts/extract_spotify_data.py`
+Running the python scripts: 
+
+`python scripts/extract_spotify_data.py`
+
+`python scripts/transform_spotify_data.py`
