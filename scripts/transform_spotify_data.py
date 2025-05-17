@@ -27,7 +27,7 @@ def transform_data():
         'Track Score': 'track_score',
         'Spotify Streams': 'spotify_streams',
         'Spotify Playlist Count': 'spotify_playlist_count',
-        'Spotify Playlist Reach': 'spotify_palylist_reach',
+        'Spotify Playlist Reach': 'spotify_playlist_reach',
         'Spotify Popularity': 'spotify_popularity',
         'YouTube Views': 'youtube_views',
         'YouTube Likes': 'youtube_likes',
