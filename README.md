@@ -29,3 +29,7 @@ Running the python scripts:
 `python scripts/extract_spotify_data.py`
 
 `python scripts/transform_spotify_data.py`
+
+Auto generating the table in PostgreSQL: `python scripts/init_db.py`
+
+Loading the data to PostgreSQL: `python -m scripts.load_spotify_data`

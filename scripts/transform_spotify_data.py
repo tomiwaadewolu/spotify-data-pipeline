@@ -13,8 +13,9 @@ def transform_data():
     df = pd.read_csv(RAW_DATA_PATH, encoding='latin1')
 
     # step 2: clean the data
-    # drop rows with missing values
-    df_clean = df.dropna().copy()
+    # drop rows missing essential values
+    essential_columns = ['Track', 'Artist', 'Release Date']
+    df_clean = df.dropna(subset=essential_columns).copy()
 
     # rename selected rows to use snake_case (for consistency)
     df_clean.rename(columns={
@@ -53,6 +54,13 @@ def transform_data():
     if 'release_date' in df_clean.columns:
         df_clean['release_date'] = pd.to_datetime(df_clean['release_date'], errors='coerce')
 
+    # convert 'explicit_track' tp boolean
+    if 'explicit_track' in df_clean.columns:
+        df_clean['explicit_track'] = df_clean['explicit_track'].astype(bool)
+
+    # fill missing numeric values
+    df_clean.fillna(-1, inplace=True)
+    
     # remove duplicate rows from the data
     df_clean.drop_duplicates(inplace=True)
 
@@ -61,6 +69,7 @@ def transform_data():
     os.makedirs(os.path.dirname(PROCESSED_DATA_PATH), exist_ok=True)
 
     # save the cleaned datafram to a csv file without row indices
+    print(f"✅ Final cleaned DataFrame has {len(df_clean)} rows")
     df_clean.to_csv(PROCESSED_DATA_PATH, index=False)
 
     # print a confirmation message
