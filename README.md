@@ -33,3 +33,11 @@ Running the python scripts:
 Auto generating the table in PostgreSQL: `python -m scripts.init_db`
 
 Loading the data to PostgreSQL: `python -m scripts.load_spotify_data`
+
+Starting Docker:
+
+`docker compose up airflow-init`
+
+`docker compose up`
+
+Go to `http://localhost:8080` in your browser and login with username and password 'airflow'
