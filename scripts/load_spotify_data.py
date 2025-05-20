@@ -60,6 +60,10 @@ def load_data():
     # insert data into the database
     session = SessionLocal()
     try:
+        # delete all existing rows before insert
+        session.query(spotify_song).delete()
+        session.commit()
+
         session.bulk_save_objects(records)
         session.commit()
         print(f"Successfully inserted {len(records)} rows into 'spotify_songs'")

@@ -30,6 +30,6 @@ Running the python scripts:
 
 `python scripts/transform_spotify_data.py`
 
-Auto generating the table in PostgreSQL: `python scripts/init_db.py`
+Auto generating the table in PostgreSQL: `python -m scripts.init_db`
 
 Loading the data to PostgreSQL: `python -m scripts.load_spotify_data`
