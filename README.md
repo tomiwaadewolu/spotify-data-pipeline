@@ -132,7 +132,7 @@ In the Airflow UI → Admin > Connections, create a connection:
 
   - PostgreSQL might not be accessible from inside the Docker container.
 
-  - Use `host.docker.internal `for macOS/Windows or `172.17.0.1` on Linux.
+  - Use `host.docker.internal` for macOS/Windows or `172.17.0.1` on Linux.
 
 ## 📌 Future Improvements
 
