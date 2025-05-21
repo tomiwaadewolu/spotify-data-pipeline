@@ -12,7 +12,7 @@
 - PostgreSQL
 - Pandas, NumPy, Matplotlib
 - Jupyter Notebooks
-- Docker (optional for containerized Airflow)
+- Docker
 - Git / GitHub
 
 ## ⚙️ Setting Up the Environment
@@ -48,6 +48,10 @@ python -m scripts.load_spotify_data
 ### 🐳 Starting Airflow with Docker
 
 Start the Airflow services:
+
+Start Docker Desktop
+
+Connect to Docker:
 
 ```
 docker compose up airflow-init
