@@ -49,7 +49,7 @@ python -m scripts.load_spotify_data
 
 Start the Airflow services:
 
-Start Docker Desktop
+Start the `spotify-data-pipeline` engine in Docker Desktop
 
 Connect to Docker:
 
